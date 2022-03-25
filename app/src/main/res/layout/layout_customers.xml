@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/bg_edit_text"
+        android:padding="@dimen/_5sdp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ic_search"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:id="@+id/search_box"
+            android:padding="@dimen/_5sdp"></EditText>
+
+        <ImageView
+            android:id="@+id/ic_search"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            style="@style/icon_style"
+            android:src="@drawable/ic_search"></ImageView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/no_result_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar"
+        android:gravity="center"
+        android:text="@string/no_results_found"
+        android:textSize="@dimen/_15sdp"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/users_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar"
+        android:background="@android:color/transparent"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_users">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

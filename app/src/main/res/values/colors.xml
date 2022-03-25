@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0D94D5</color>
+    <color name="colorPrimaryDark">#0D81D0</color>
+    <color name="colorAccent">#0D94D5</color>
+
+    <color name="icon_grey">#1B323D</color>
+    <color name="edit_border_grey">#E1E1E1</color>
+    <color name="card_border_grey">#707070</color>
+    <color name="white">#FFFFFF</color>
+    <color name="icon_fill_grey">#F2F7FC</color>
+    <color name="chat_fill_grey">#F1F1F1</color>
+    <color name="bg_grey">#F9FCFF</color>
+    <color name="black">#000000</color>
+
+    <color name="sky">#d8ecf9</color>
+</resources>

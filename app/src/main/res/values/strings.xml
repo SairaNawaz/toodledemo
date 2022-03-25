@@ -1,0 +1,29 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">SG2D</string>
+
+    <string name="activity_main">Main Activity</string>
+
+    <string name="enter_a_title">Enter a title</string>
+    <string name="entry_details_default_text">Entry Details!</string>
+    <string name="submit_button_text">Submit</string>
+    <string name="no_results_found">No Result found</string>
+
+    <string name="title_users">Users</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_login">Login</string>
+    <string name="access_your_account">Access to your account</string>
+    <string name="email">Email</string>
+    <string name="logout">Logout</string>
+    <string name="password">Password</string>
+
+    <string name="dummy_username">Steven Copeland</string>
+    <string name="dummy_email">stevencopeland@gmail.com</string>
+
+    <string name="dummy_chat_time">Today 12:35 PM</string>
+    <string name="dummy_chat_msg">How are you?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tag_users">Users</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tag_chat">Chat</string>
+    <string name="message_hint">Reply</string>
+</resources>

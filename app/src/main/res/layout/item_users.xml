@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_shadow"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingTop="@dimen/_7sdp"
+    android:paddingRight="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_7sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/user_item">
+
+        <ImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:src="@drawable/dummy_img" />
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/text_normal_black_user"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/ic_msg"
+            android:layout_toRightOf="@+id/profile_photo"
+            android:text="@string/dummy_username"></TextView>
+
+        <TextView
+            android:id="@+id/user_role"
+            style="@style/text_normal_black_user_light"
+            android:layout_below="@+id/user_name"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/ic_msg"
+            android:layout_toRightOf="@+id/profile_photo"
+            android:text="@string/dummy_email"></TextView>
+
+        <ImageView
+            android:id="@+id/ic_msg"
+            style="@style/icon_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_message_blue"></ImageView>
+    </RelativeLayout>
+
+</RelativeLayout>

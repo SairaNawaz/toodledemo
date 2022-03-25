@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey"
+    tools:context=".auth.presentation.AuthActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_grey">
+
+        <ImageView
+            android:id="@+id/logo_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/login_area"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_sg2d"></ImageView>
+
+        <LinearLayout
+            android:id="@+id/login_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <TextView
+                style="@style/login_title"
+                android:layout_below="@+id/logo_img"
+                android:text="@string/title_login"></TextView>
+
+            <TextView
+                style="@style/text_normal_black_center"
+                android:layout_below="@+id/logo_img"
+                android:layout_gravity="center"
+                android:text="@string/access_your_account"></TextView>
+
+            <TextView
+                style="@style/text_normal_black_left"
+                android:layout_below="@+id/logo_img"
+                android:layout_gravity="left"
+                android:text="@string/email"></TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit_text"
+                android:padding="@dimen/_5sdp">
+
+                <EditText
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/ic_user"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:padding="@dimen/_5sdp"></EditText>
+
+                <ImageView
+                    android:id="@+id/ic_user"
+                    style="@style/icon_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_user"></ImageView>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/text_normal_black_left"
+                android:layout_below="@+id/logo_img"
+                android:layout_gravity="left"
+                android:text="@string/password"></TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit_text"
+                android:padding="@dimen/_5sdp">
+
+                <EditText
+                    android:id="@+id/user_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/ic_password"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:padding="@dimen/_5sdp"></EditText>
+
+                <ImageView
+                    android:id="@+id/ic_password"
+                    style="@style/icon_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_password"></ImageView>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/round_cornered_btn"
+                android:layout_below="@+id/logo_img"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/title_login"
+                android:id="@+id/btn_login"
+                android:textAllCaps="true"></TextView>
+        </LinearLayout>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/splash_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_grey">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_sg2d"></ImageView>
+    </RelativeLayout>
+</FrameLayout>

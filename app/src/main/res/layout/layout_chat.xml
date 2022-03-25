@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/bg_edit_text"
+        android:padding="@dimen/_5sdp">
+
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ic_search"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:padding="@dimen/_5sdp"></EditText>
+
+        <ImageView
+            android:id="@+id/ic_search"
+            style="@style/icon_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_search"></ImageView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/no_result_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/message_box"
+        android:layout_below="@+id/search_bar"
+        android:gravity="center"
+        android:text="@string/no_results_found"
+        android:textSize="@dimen/_15sdp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/message_box"
+        android:layout_below="@+id/search_bar"
+        android:layout_marginTop="@dimen/_15sdp"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_chat_send_file">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/message_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/bg_edit_text"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/input_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/input_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_image"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ic_search"
+            android:background="@null"
+            android:hint="@string/message_hint"
+            android:imeOptions="actionDone"
+            android:padding="@dimen/_5sdp"></EditText>
+
+        <ImageView
+            android:id="@+id/btn_send"
+            style="@style/icon_style2"
+            android:layout_below="@id/input_image"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_send"></ImageView>
+
+        <ImageView
+            android:id="@+id/btn_file"
+            style="@style/icon_style2"
+            android:layout_below="@id/input_image"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:padding="@dimen/_5sdp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_attachment"></ImageView>
+    </RelativeLayout>
+</RelativeLayout>

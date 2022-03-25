@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/header_title"
+        style="@style/header_title"
+        android:layout_toLeftOf="@+id/btn_logout"
+        android:layout_toRightOf="@+id/btn_back"
+        android:text="@string/title_users" />
+
+    <ImageView
+        android:id="@+id/btn_logout"
+        style="@style/icon_style2"
+        android:layout_alignTop="@+id/header_title"
+        android:layout_alignBottom="@+id/header_title"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_log_out" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        style="@style/icon_style2"
+        android:layout_alignTop="@+id/header_title"
+        android:layout_alignBottom="@+id/header_title"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_back_arrow" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_title"
+        android:background="@drawable/main_card_bg"></View>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header_title"
+        android:padding="@dimen/_10sdp">
+
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_grey" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>
